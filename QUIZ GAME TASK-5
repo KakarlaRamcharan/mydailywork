@@ -1,13 +1,11 @@
-# Function to display a welcome message and rules
+
 def display_welcome():
     print("Welcome to the Quiz Game!")
     print("=========================")
     print("Answer the following questions to the best of your ability.")
     print("For each question, type the letter of your choice and press Enter.\n")
 
-# Function to load quiz questions
 def load_questions():
-    # You can replace this with a list of questions specific to your topic
     questions = [
         {
             "question": "What is the capital of France?",
@@ -37,7 +35,6 @@ def load_questions():
     ]
     return questions
 
-# Function to present the quiz questions and calculate the score
 def run_quiz(questions):
     score = 0
     
@@ -55,7 +52,6 @@ def run_quiz(questions):
 
     return score
 
-# Function to display the final results
 def display_results(score, total):
     print("Quiz Completed!")
     print("================")
@@ -68,7 +64,6 @@ def display_results(score, total):
     else:
         print("Better luck next time. Keep practicing!")
 
-# Main function
 def main():
     display_welcome()
     
@@ -79,7 +74,6 @@ def main():
         score = run_quiz(questions)
         display_results(score, total_questions)
 
-        # Ask if the user wants to play again
         play_again = input("\nDo you want to play again? (yes/no): ").lower()
         if play_again != 'yes':
             print("Thank you for playing the quiz game! Goodbye.")
